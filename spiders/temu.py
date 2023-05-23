@@ -22,7 +22,6 @@ prices = price_tag.findAll('div')
 sale_price = prices[0].text
 original_price = prices[1].text
 sales = prices[2].text
-
 image_container = soup.find('div', {'class': '_qc4rnOX'})
 images = image_container.findAll('div')
 
