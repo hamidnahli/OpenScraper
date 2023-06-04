@@ -1,0 +1,11 @@
+.env
+play.py
+gc.py
+run.py
+sample.json
+sample.html
+block.py
+coingecko.json
+coingecko.xlsx
+.idea
+__pycache__
