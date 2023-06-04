@@ -59,9 +59,9 @@ def start_scraper():
     return jsonify({'run_id': run.id})
 
 
-@app.route('/run_status', methods=['GET'])
-def run_status():
-    return {'scraer': 'CoinGecko', 'run_id': 1, 'status': 'finished'}
+# @app.route('/run_status', methods=['GET'])
+# def run_status():
+#     return {'scraer': 'CoinGecko', 'run_id': 1, 'status': 'finished'}
 
 
 app.run(debug=True)

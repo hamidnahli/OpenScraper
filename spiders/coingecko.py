@@ -47,5 +47,3 @@ def run_scraper() -> list:
                 print(f'{i}:{urls.index(url)} - Failed')
     return data
 
-
-# run_scraper()
