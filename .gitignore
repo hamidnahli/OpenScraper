@@ -9,3 +9,4 @@ coingecko.json
 coingecko.xlsx
 .idea
 __pycache__
+.DS_Store
