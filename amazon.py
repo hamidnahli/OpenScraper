@@ -40,14 +40,9 @@ for all in range(1,2) :
         else :
             delivery = 'N/A'
 
-        link = ele.find('a', href = True)
-        for links in link :
-            urls = links["href"]
-    print(links)
-        
 
 
-prodact = { 
+        prodact = { 
             "Title" : title ,
             "Rating" : rating ,
             "Price" : price ,
@@ -56,4 +51,8 @@ prodact = {
         }
     
         
-prodacts.append(prodact)
+        prodacts.append(prodact)
+
+        df = pd.DataFrame(prodacts)
+
+        df.to_excel('scraped_data.xlsx', index=False)
