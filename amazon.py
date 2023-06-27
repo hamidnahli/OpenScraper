@@ -17,7 +17,11 @@ for all in range(1,2) :
     div_element = soup.find_all('div',{'class':'sg-col-20-of-24 s-result-item s-asin sg-col-0-of-12 sg-col-16-of-20 sg-col s-widget-spacing-small sg-col-12-of-16'})
     prodacts  = []
     for ele in div_element:
-     
+
+        link = ele.find('a')
+        for links in link : 
+            href = link.get('href')
+            
         title = ele.find('span',{'class':'a-size-medium a-color-base a-text-normal'}).text
         
         rating_element = ele.find('div',{'class':'a-row a-size-small'})
@@ -48,6 +52,7 @@ for all in range(1,2) :
             "Price" : price ,
             "Real Price" : real_price ,
             "Delivery price" : delivery_price ,
+            "Link" : href , 
         }
     
         
@@ -56,3 +61,5 @@ for all in range(1,2) :
         df = pd.DataFrame(prodacts)
 
         df.to_excel('scraped_data.xlsx', index=False)
+         
+        print(df)
