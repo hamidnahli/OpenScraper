@@ -61,5 +61,3 @@ for all in range(1,2) :
         df = pd.DataFrame(prodacts)
 
         df.to_excel('scraped_data.xlsx', index=False)
-         
-        print(df)
